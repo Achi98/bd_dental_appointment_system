@@ -1,3 +1,215 @@
+/*Insertando datos en las tablas maestras*/
+
+--Insertando datos en la tabla Paciente
+INSERT INTO [grupo05].[Paciente]
+           ([id_paciente]
+           ,[dni]
+           ,[nombre]
+           ,[apellido]
+           ,[fecha_nacimiento]
+           ,[direccion]
+           ,[telefono]
+           ,[email]
+           ,[sexo]
+           ,[ubigeo])
+     VALUES 
+            (1, 144954570, 'Juan', 'Perez', '2008-05-03', 'Calle 123', 525189017, 'juan.perez@clinica.com', 'M', 15001),
+            (2, 557902628, 'Ana', 'Garcia', '1994-08-05', 'Avenida 456', 932108430, 'ana.garcia@clinica.com', 'F', 15002),
+            (3, 833408920, 'Carlos', 'Lopez', '2008-08-21', 'Plaza Principal', 421298178, 'carlos.lopez@clinica.com', 'M', 15003),
+            (4, 195277909, 'Maria', 'Rodriguez', '2007-06-05', 'Avenida Central', 797570051, 'maria.rodriguez@clinica.com', 'F', 15004),
+            (5, 76965303, 'Luis', 'Martinez', '1985-02-03', 'Calle 10', 554965560, 'luis.martinez@clinica.com', 'M', 15005),
+            (6, 616418807, 'Ana', 'Fernandez', '2007-12-27', 'Carrera 20', 444549932, 'ana.fernandez@clinica.com', 'F', 15006),
+            (7, 210389208, 'David', 'Lopez', '1991-09-30', 'Calle 30', 498458771, 'david.lopez@clinica.com', 'M', 15007),
+            (8, 964556817, 'Laura', 'Gonzalez', '1986-05-22', 'Avenida 40', 825289854, 'laura.gonzalez@clinica.com', 'F', 15008),
+            (9, 683959063, 'Daniel', 'Sanchez', '2003-01-26', 'Calle 50', 963165661, 'daniel.sanchez@clinica.com', 'M', 15009),
+            (10, 979583243, 'Sofia', 'Perez', '1985-11-21', 'Carrera 60', 158907375, 'sofia.perez@clinica.com', 'F', 15010),
+            (11, 412757234, 'Diego', 'Ramirez', '2006-02-12', 'Avenida 70', 253206514, 'diego.ramirez@clinica.com', 'M', 15011),
+            (12, 193353795, 'Valentina', 'Torres', '1986-04-21', 'Calle 80', 13219933, 'valentina.torres@clinica.com', 'F', 15012),
+            (13, 404946768, 'Alejandro', 'Flores', '1993-04-21', 'Carrera 90', 350677483, 'alejandro.flores@clinica.com', 'M', 15013),
+            (14, 817869891, 'Isabella', 'Diaz', '1985-03-17', 'Avenida 100', 154533815, 'isabella.diaz@clinica.com', 'F', 15014),
+            (15, 714238053, 'Joaquin', 'Ruiz', '1996-06-09', 'Calle 110', 950589905, 'joaquin.ruiz@clinica.com', 'M', 15015),
+            (16, 760481432, 'Emma', 'Alvarez', '2009-07-13', 'Carrera 120', 486820829, 'emma.alvarez@clinica.com', 'F', 15016),
+            (17, 602965984, 'Lucas', 'Gomez', '1988-10-26', 'Avenida 130', 492486935, 'lucas.gomez@clinica.com', 'M', 15017),
+            (18, 266068124, 'Valeria', 'Hernandez', '1998-04-01', 'Calle 140', 672481525, 'valeria.hernandez@clinica.com', 'F', 15018),
+            (19, 108336733, 'Martin', 'Jimenez', '2006-11-14', 'Carrera 150', 156464598, 'martin.jimenez@clinica.com', 'M', 15019),
+            (20, 7383017, 'Elena', 'Molina', '1985-12-28', 'Avenida 160', 776828780, 'elena.molina@clinica.com', 'F', 15020),
+            (21, 956659679, 'Gabriel', 'Ortiz', '1992-06-19', 'Calle 170', 148723046, 'gabriel.ortiz@clinica.com', 'M', 15021),
+            (22, 230075460, 'Amanda', 'Perez', '2001-04-19', 'Carrera 180', 989172812, 'amanda.perez@clinica.com', 'F', 15022),
+            (23, 670566364, 'Bruno', 'Rodriguez', '1994-02-18', 'Avenida 190', 203435661, 'bruno.rodriguez@clinica.com', 'M', 15023),
+            (24, 523298318, 'Camila', 'Sanchez', '2001-10-28', 'Calle 200', 934553786, 'camila.sanchez@clinica.com', 'F', 15024),
+            (25, 456653381, 'Matias', 'Gonzalez', '2003-06-03', 'Carrera 210', 916663906, 'matias.gonzalez@clinica.com', 'M', 15025),
+            (26, 273671277, 'Valentina', 'Fernandez', '2009-08-23', 'Avenida 220', 497478549, 'valentina.fernandez@clinica.com', 'F', 15026),
+            (27, 906229030, 'Sebastian', 'Lopez', '2002-09-20', 'Calle 230', 570117715, 'sebastian.lopez@clinica.com', 'M', 15027),
+            (28, 947411437, 'Isabella', 'Garcia', '1989-01-01', 'Carrera 240', 747895611, 'isabella.garcia@clinica.com', 'F', 15028),
+            (29, 900486818, 'Gabriel', 'Martinez', '2003-11-22', 'Avenida 250', 607257573, 'gabriel.martinez@clinica.com', 'M', 15029),
+            (30, 224503080, 'Emma', 'Gomez', '2000-06-15', 'Calle 260', 979163129, 'emma.gomez@clinica.com', 'F', 15030),
+            (31, 563179892, 'Lucas', 'Perez', '1986-12-25', 'Carrera 270', 627684393, 'lucas.perez@clinica.com', 'M', 15031),
+            (32, 396384527, 'Valeria', 'Diaz', '2000-10-14', 'Avenida 280', 499667995, 'valeria.diaz@clinica.com', 'F', 15032),
+            (33, 730210191, 'Martin', 'Ruiz', '1987-12-29', 'Calle 290', 657586161, 'martin.ruiz@clinica.com', 'M', 15033),
+            (34, 360371041, 'Elena', 'Hernandez', '2000-02-10', 'Carrera 300', 666738385, 'elena.hernandez@clinica.com', 'F', 15034),
+            (35, 667817421, 'Gabriel', 'Jimenez', '1992-01-13', 'Avenida 310', 420007773, 'gabriel.jimenez@clinica.com', 'M', 15035),
+            (36, 655025645, 'Sofia', 'Molina', '1995-12-02', 'Calle 320', 707911937, 'sofia.molina@clinica.com', 'F', 15036),
+            (37, 932121963, 'Diego', 'Ortiz', '1990-11-14', 'Carrera 330', 733541481, 'diego.ortiz@clinica.com', 'M', 15037),
+            (38, 975912618, 'Valentina', 'Perez', '1994-04-19', 'Avenida 340', 927737336, 'valentina.perez@clinica.com', 'F', 15038),
+            (39, 140133587, 'Alejandro', 'Rodriguez', '1991-09-12', 'Calle 350', 752940028, 'alejandro.rodriguez@clinica.com', 'M', 15039),
+            (40, 491306396, 'Isabella', 'Sanchez', '2005-08-06', 'Carrera 360', 216869189, 'isabella.sanchez@clinica.com', 'F', 15040),
+            (41, 216945159, 'Joaquin', 'Gonzalez', '1988-07-09', 'Avenida 370', 549338325, 'joaquin.gonzalez@clinica.com', 'M', 15041),
+            (42, 61202239, 'Emma', 'Fernandez', '2009-10-09', 'Calle 380', 567296577, 'emma.fernandez@clinica.com', 'F', 15042),
+            (43, 893430618, 'Lucas', 'Lopez', '1997-07-20', 'Carrera 390', 816369120, 'lucas.lopez@clinica.com', 'M', 15043),
+            (44, 195589329, 'Valeria', 'Garcia', '1988-09-20', 'Avenida 400', 736315261, 'valeria.garcia@clinica.com', 'F', 15044),
+            (45, 57885024, 'Martin', 'Martinez', '1994-02-18', 'Calle 410', 995542353, 'martin.martinez@clinica.com', 'M', 15045),
+            (46, 375818431, 'Elena', 'Gomez', '2006-01-19', 'Carrera 420', 795743637, 'elena.gomez@clinica.com', 'F', 15046),
+            (47, 495130886, 'Gabriel', 'Perez', '1990-08-02', 'Avenida 430', 826555099, 'gabriel.perez@clinica.com', 'M', 15047),
+            (48, 182226166, 'Sofia', 'Diaz', '1989-09-21', 'Calle 440', 148185200, 'sofia.diaz@clinica.com', 'F', 15048),
+            (49, 138229775, 'Diego', 'Ruiz', '1986-08-29', 'Carrera 450', 565815856, 'diego.ruiz@clinica.com', 'M', 15049),
+            (50, 784620956, 'Valentina', 'Hernandez', '2004-03-24', 'Avenida 460', 149895133, 'valentina.hernandez@clinica.com', 'F', 15050);
+
+--Insertando datos en la tabla consultorios
+INSERT INTO [grupo05].[Consultorios]
+           ([id_consultorio]
+           ,[numero_piso])
+     VALUES 
+(1, 1),
+(2, 1),
+(3, 2),
+(4, 2),
+(5, 3),
+(6, 3),
+(7, 4),
+(8, 4),
+(9, 5),
+(10, 5);
+
+--Insertando datos en la tabla Doctor
+INSERT INTO [grupo05].[Doctor]
+           ([id_doctor]
+           ,[dni]
+           ,[nombre]
+           ,[apellido]
+           ,[telefono]
+           ,[fecha_nacimiento]
+           ,[email]
+           ,[fecha_contratacion]
+           ,[sexo]
+           ,[ubigeo]
+           ,[id_especialidad])
+     VALUES 
+            (1, 12345678, 'Juan', 'Perez', 987654321, '1980-01-01', 'juan.perez@clinica.com', '2023-06-14', 'M', 150101, 1),
+            (2, 23456789, 'Ana', 'Garcia', 987654322, '1981-02-02', 'ana.garcia@clinica.com', '2023-06-14', 'F', 150102, 2),
+            (3, 34567890, 'Carlos', 'Lopez', 987654323, '1982-03-03', 'carlos.lopez@clinica.com', '2023-06-15', 'M', 150103, 3),
+            (4, 45678901, 'Maria', 'Gonzalez', 987654324, '1983-04-04', 'maria.gonzalez@clinica.com', '2023-06-15', 'F', 150104, 4),
+            (5, 56789012, 'Luis', 'Martinez', 987654325, '1984-05-05', 'luis.martinez@clinica.com', '2023-06-15', 'M', 150105, 5),
+            (6, 67890123, 'Elena', 'Hernandez', 987654326, '1985-06-06', 'elena.hernandez@clinica.com', '2023-06-15', 'F', 150106, 6),
+            (7, 78901234, 'Jorge', 'Diaz', 987654327, '1986-07-07', 'jorge.diaz@clinica.com', '2023-06-16', 'M', 150107, 7),
+            (8, 89012345, 'Laura', 'Ramirez', 987654328, '1987-08-08', 'laura.ramirez@clinica.com', '2023-06-16', 'F', 150108, 8),
+            (9, 90123456, 'Pedro', 'Sanchez', 987654329, '1988-09-09', 'pedro.sanchez@clinica.com', '2023-06-16', 'M', 150109, 9),
+            (10, 12345670, 'Sofia', 'Fernandez', 987654330, '1989-10-10', 'sofia.fernandez@clinica.com', '2023-06-17', 'F', 150110, 10);
+
+--Insertando datos en la tabla Tratamiento:
+INSERT INTO [grupo05].[Tratamiento]
+           ([id_tratamiento]
+           ,[id_especialidad]
+           ,[nombre_tratamiento]
+           ,[precio_tratamiento])
+     VALUES
+            (1, 1, 'Limpieza Dental', 50.00),
+            (2, 2, 'Brackets', 1500.00),
+            (3, 3, 'Tratamiento de Encías', 300.00),
+            (4, 4, 'Tratamiento de Conducto', 200.00),
+            (5, 5, 'Consulta Odontopediátrica', 100.00),
+            (6, 6, 'Prótesis Dental', 500.00),
+            (7, 7, 'Implante Dental', 1200.00),
+            (8, 8, 'Blanqueamiento Dental', 250.00),
+            (9, 9, 'Extracción de Muela', 150.00),
+            (10, 10, 'Radiografía Dental', 80.00);
+
+
+--Insertando datos en la tabla Especialidad:
+INSERT INTO [grupo05].[Especialidad]
+           ([id_especialidad]
+           ,[nombre_especialidad])
+     VALUES
+            (1, 'Odontología General'),
+            (2, 'Ortodoncia'),
+            (3, 'Periodoncia'),
+            (4, 'Endodoncia'),
+            (5, 'Odontopediatría'),
+            (6, 'Prostodoncia'),
+            (7, 'Implantología'),
+            (8, 'Estética Dental'),
+            (9, 'Cirugía Oral'),
+            (10, 'Radiología Dental');
+
+
+--Insertando datos en la tabla Estado Cita
+INSERT INTO [grupo05].[Estado_Cita]
+           ([id_estado_cita]
+           ,[descripcion])
+     VALUES
+            (1, 'Reservada'),
+            (2, 'Confirmada'),
+            (3, 'Completada'),
+            (4, 'Cancelada'),
+            (5, 'Reprogramada');
+
+--Insertando datos en la tabla historia clinica
+INSERT INTO [grupo05].[Historia_Clinica]
+           ([id_historia]
+           ,[fecha_creacion_historia]
+           ,[id_paciente])
+     VALUES 
+            (1, '2023-08-01 10:20:00.000', 1),
+            (2, '2023-08-17 11:10:00.000', 2),
+            (3, '2023-08-20 09:00:00.000', 3),
+            (4, '2023-08-21 10:30:00.000', 4),
+            (5, '2023-08-22 09:00:00.000', 5),
+            (6, '2023-08-23 09:10:00.000', 6),
+            (7, '2023-08-24 09:00:00.000', 7),
+            (8, '2023-08-28 09:15:00.000', 8),
+            (9, '2023-08-30 09:30:00.000', 9),
+            (10, '2023-08-31 09:30:00.000', 10),
+            (11, '2023-10-02 09:30:00.000', 11),
+            (12, '2023-11-03 09:30:00.000', 12),
+            (13, '2023-11-05 09:00:00.000', 13),
+            (14, '2023-12-02 09:00:00.000', 14),
+            (15, '2023-12-03 10:20:00.000', 15),
+            (16, '2023-12-02 09:30:00.000', 16),
+            (17, '2023-12-05 09:30:00.000', 17),
+            (18, '2023-12-05 09:30:00.000', 18),
+            (19, '2023-12-01 09:30:00.000', 19),
+            (20, '2023-12-08 08:30:00.000', 20),
+            (21, '2023-12-02 09:30:00.000', 21),
+            (22, '2023-12-10 10:20:00.000', 22),
+            (23, '2023-12-01 09:30:00.000', 23),
+            (24, '2023-12-01 09:30:00.000', 24),
+            (25, '2023-12-01 09:30:00.000', 25),
+            (26, '2023-12-01 09:30:00.000', 26),
+            (27, '2023-12-25 09:30:00.000', 27),
+            (28, '2023-12-05 10:00:00.000', 28),
+            (29, '2023-12-08 11:30:00.000', 29),
+            (30, '2023-12-12 09:00:00.000', 30),
+            (31, '2023-12-20 10:30:00.000', 31),
+            (32, '2023-12-21 10:00:00.000', 32),
+            (33, '2023-12-24 11:30:00.000', 33),
+            (34, '2023-12-27 09:00:00.000', 34),
+            (35, '2023-12-30 10:15:00.000', 35),
+            (36, '2023-12-31 11:45:00.000', 36),
+            (37, '2023-12-31 14:00:00.000', 37),
+            (38, '2023-12-05 09:00:00.000', 38),
+            (39, '2023-12-14 14:45:00.000', 39),
+            (40, '2023-12-02 08:00:00.000', 40),
+            (41, '2023-12-01 09:00:00.000', 41),
+            (42, '2023-12-02 09:00:00.000', 42),
+            (43, '2023-12-03 10:20:00.000', 43),
+            (44, '2023-12-04 11:20:00.000', 44),
+            (45, '2023-12-05 13:40:00.000', 45),
+            (46, '2023-12-06 14:50:00.000', 46),
+            (47, '2023-12-07 15:10:00.000', 47),
+            (48, '2023-12-08 08:30:00.000', 48),
+            (49, '2023-12-09 09:50:00.000', 49),
+            (50, '2023-12-10 10:20:00.000', 50);
+
+/*insertando datos en las tablas transaccionales*/
 -- Insertando datos en la tabla Citas
 -- ID 1
 INSERT INTO [grupo05].[Cita] (
@@ -25,10 +237,7 @@ VALUES
 (9, 1, 7, 6, 7, 7, '2023-10-17 11:30:0', '2023-10-17 11:30:00', '2023-10-13 13:00:00', 'Consulta General 9', 3),
 (10, 1, 9, 5, 9, 9, Null, '2023-11-23 13:05:00', '2023-10-25 09:00:00', 'Consulta General 10', 4);
 
-select * from grupo05.Cita
 
-select * from grupo05.Historia_Clinica
-select * from grupo05.[Historia_Clinica_Detalle]
 -- Insertando en la tabla Historia detalle
 
 INSERT INTO [grupo05].[Historia_Clinica_Detalle] (
@@ -45,13 +254,6 @@ INSERT INTO [grupo05].[Historia_Clinica_Detalle] (
 (8, 1, 'Diagnóstico automatizado', 'Detalle generado automáticamente', '2023-10-14 15:00:00', 8),
 (9, 1, 'Diagnóstico automatizado', 'Detalle generado automáticamente', '2023-10-17 11:30:00', 9),
 (10, 1, 'Diagnóstico automatizado', 'Detalle generado automáticamente', '2023-11-23 13:10:00', 10)
-
-
-
-
-
-
-
 
 -- Insertando datos en la tabla Citas
 -- ID 2
@@ -95,8 +297,6 @@ INSERT INTO [grupo05].[Historia_Clinica_Detalle] (
 (18, 2, 'Diagnóstico automatizado', 'Detalle generado automáticamente', '2023-11-22 10:00:00', 18),
 (19, 2, 'Diagnóstico automatizado', 'Detalle generado automáticamente', '2023-12-13 10:30:00', 19),
 (20, 2, 'Diagnóstico automatizado', 'Detalle generado automáticamente', '2023-12-14 14:05:00', 20);
-
-
 
 -- ID 3
 
