@@ -87,22 +87,18 @@ WHERE
     YEAR(c.fecha_hora_programacion) = 2023
 GROUP BY 
     e.nombre_especialidad;						
-/*�Cu�les son los pacientes que han tenido m�s citas en a�o 2023?*/
 
-SELECT 
-    p.nombre,
-    p.apellido,
-    COUNT(c.id_cita) AS total_citas
-FROM 
-    [grupo05].[Cita] AS c
-JOIN 
-    [grupo05].[Paciente] AS p ON c.id_paciente = p.id_paciente
-WHERE 
-    c.fecha_hora_llegada >= DATEADD(YEAR, -1, GETDATE())
-GROUP BY 
-    p.nombre, p.apellido
-ORDER BY 
-    total_citas DESC;						
+/*¿Cuántos tratamientos distintos ha recibido cada paciente durante el año 2023?*/
+
+SELECT P.nombre, 
+       P.apellido, 
+       COUNT(DISTINCT T.id_tratamiento) AS Total_Tratamientos
+FROM [grupo05].[Paciente] P
+INNER JOIN [grupo05].[Cita] C ON P.id_paciente = C.id_paciente
+INNER JOIN [grupo05].[Tratamiento] T ON C.id_tratamiento = T.id_tratamiento
+GROUP BY P.nombre, P.apellido
+ORDER BY Total_Tratamientos DESC;
+						
 /*�Cuantas citas fueron canceladas en los ultimos 6 meses del a�o 2023 ?*/
 SELECT COUNT(*) AS cantidad_citas_canceladas
 FROM grupo05.Cita c
@@ -111,15 +107,12 @@ INNER JOIN grupo05.Estado_Cita ec
 WHERE ec.id_estado_cita = 4
 AND c.fecha_hora_programacion BETWEEN '2023-07-01' AND '2023-12-31';
 						
-/*Cuanto dinero perdio en tratamiento la clinica por citas canceladas en los ultimos 5 meses del 2023*/
-SELECT grupo05.Tratamiento.nombre_tratamiento, SUM(grupo05.Tratamiento.precio_tratamiento) AS dinero_perdido_en_soles
-FROM grupo05.Tratamiento
-INNER JOIN grupo05.Cita
-ON grupo05.Tratamiento.id_tratamiento = grupo05.Cita.id_tratamiento
-WHERE grupo05.Cita.id_estado_cita = 4 AND
-grupo05.Cita.fecha_hora_programacion BETWEEN '2023-10-01' AND '2023-12-31'
-GROUP BY nombre_tratamiento, precio_tratamiento
-ORDER BY precio_tratamiento DESC;
+/*Qué cespecialidad médica tiene más citas programadas en el año 2023 */
+SELECT e.id_especialidad, e.nombre_especialidad, COUNT(c.id_cita) AS numero_citas_programadas
+FROM [grupo05].[Especialidad] e
+JOIN [grupo05].[Cita] c ON e.id_especialidad = c.id_especialidad
+GROUP BY e.id_especialidad, e.nombre_especialidad
+ORDER BY numero_citas_programadas DESC
 
 						
 /*Cuanto fue el ingreso por tratamiento durante el ultimo trimestre 2023 */
